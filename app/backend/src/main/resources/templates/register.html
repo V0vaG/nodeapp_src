@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Register</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div class="register-container">
+  <div class="form-container">
     <h2>Register</h2>
-
     <form method="post" action="/register">
       <div th:if="${error}" class="error" th:text="${error}"></div>
 
@@ -24,10 +23,9 @@
 
       <div id="passwordMatchMessage" class="password-match"></div>
 
-      <input type="submit" value="Register" id="submitBtn" disabled>
+      <button type="submit" id="submitBtn" disabled>Register</button>
     </form>
-
-    <a class="login-link" href="/login">Already have an account? Login here</a>
+    <p class="alt-link">Already have an account? <a href="/login">Login here</a></p>
   </div>
 
   <script>

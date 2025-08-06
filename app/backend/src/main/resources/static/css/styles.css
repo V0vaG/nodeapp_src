@@ -1,20 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  min-height: 100vh;
 }
 
-.register-container {
-  background-color: white;
-  padding: 2.5rem 2rem;
+.form-container, .dashboard-container {
+  background-color: #fff;
+  padding: 2rem;
   border-radius: 12px;
-  width: 100%;
-  max-width: 450px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -35,11 +40,7 @@ input[type="password"] {
   font-size: 1rem;
 }
 
-input[type="submit"]:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
-
+button,
 input[type="submit"] {
   width: 100%;
   background-color: #2575fc;
@@ -52,8 +53,15 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover:not(:disabled) {
+button:hover,
+input[type="submit"]:hover {
   background-color: #1a5fe0;
+}
+
+button:disabled,
+input[type="submit"]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
 }
 
 .error {
@@ -75,14 +83,25 @@ input[type="submit"]:hover:not(:disabled) {
   color: red;
 }
 
-.login-link {
-  display: block;
-  margin-top: 1rem;
+.alt-link {
   font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.alt-link a {
   color: #2575fc;
   text-decoration: none;
 }
 
-.login-link:hover {
+.alt-link a:hover {
   text-decoration: underline;
+}
+
+.logout-btn {
+  background-color: #f44336;
+  margin-top: 1.5rem;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
 }
