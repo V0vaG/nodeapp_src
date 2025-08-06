@@ -1,14 +1,11 @@
-// model/User.java
 package com.example.auth.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
 @Table(name = "users")
 public class User {
     @Id
@@ -18,5 +15,5 @@ public class User {
     @Column(unique = true)
     private String username;
 
-    private String passwordHash;
+    private String password;
 }

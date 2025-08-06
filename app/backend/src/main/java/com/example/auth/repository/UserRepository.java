@@ -1,4 +1,3 @@
-// repository/UserRepository.java
 package com.example.auth.repository;
 
 import com.example.auth.model.User;
