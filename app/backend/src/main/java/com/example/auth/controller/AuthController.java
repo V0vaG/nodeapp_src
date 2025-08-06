@@ -39,6 +39,13 @@ public class AuthController {
                     return "login";
                 });
     }
+    
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();  // Clear the session
+        return "redirect:/login?logout";  // Optional: show a message
+    }
+
 
     @GetMapping("/register")
     public String registerPage() {

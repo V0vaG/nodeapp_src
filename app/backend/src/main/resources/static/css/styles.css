@@ -1,0 +1,88 @@
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.register-container {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="submit"]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #2575fc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover:not(:disabled) {
+  background-color: #1a5fe0;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.password-match {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.password-match.match {
+  color: green;
+}
+
+.password-match.mismatch {
+  color: red;
+}
+
+.login-link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
